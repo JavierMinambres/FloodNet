@@ -145,17 +145,22 @@ whether its mask is official (`oficial`) or revised (`reparada`). The other note
 
 ## Trained models
 
-The `v1.0-paper` release has the checkpoints used in the paper as attachments, and
-[CHECKSUMS.sha256](CHECKSUMS.sha256) lists their SHA-256 hashes. Put them back in the paths below to
-run the evaluation notebook:
+The checkpoints used in the paper are attached to the `v1.0-paper` release, and
+[CHECKSUMS.sha256](CHECKSUMS.sha256) lists their SHA-256 hashes. Download them and put them back in the
+paths below to run the evaluation notebook:
 
-| File | Model |
-|---|---|
-| `models/best_model_iou_full.pth` | Hybrid U-Net, best validation mIoU (epoch 30) |
-| `models/deeplabv3plus_r50_full_best.pt` | DeepLabV3+ R50, best validation mIoU (epoch 32) |
-| `models/deeplabv3plus_r50_floodnet_full.onnx` | DeepLabV3+ exported to ONNX |
-| `runs/yolo/yolo11n-seg-full/weights/best.pt` | YOLO11n-seg, best validation fitness (epoch 218) |
-| `models/yolo11n_seg_floodnet_full.onnx` | YOLO11n-seg exported to ONNX |
+| Release asset | Path in the project | Model |
+|---|---|---|
+| `best_model_iou_full.pth` | `models/best_model_iou_full.pth` | Hybrid U-Net, best validation mIoU (epoch 30) |
+| `deeplabv3plus_r50_full_best.pt` | `models/deeplabv3plus_r50_full_best.pt` | DeepLabV3+ R50, best validation mIoU (epoch 32) |
+| `deeplabv3plus_r50_floodnet_full.onnx` | `models/deeplabv3plus_r50_floodnet_full.onnx` | DeepLabV3+ exported to ONNX |
+| `yolo11n-seg-full_best.pt` | `runs/yolo/yolo11n-seg-full/weights/best.pt` | YOLO11n-seg, best validation fitness (epoch 218) |
+| `yolo11n_seg_floodnet_full.onnx` | `models/yolo11n_seg_floodnet_full.onnx` | YOLO11n-seg exported to ONNX |
+
+The small training records are in the repository itself: the parameter and split files of the two
+comparison models (`models/*_config.json`), the DeepLabV3+ training history
+(`models/deeplabv3plus_r50_full_best.csv`) and the Ultralytics run log (`runs/yolo/yolo11n-seg-full/`
+`results.csv` and `args.yaml`). The U-Net training history is in the outputs of its notebook.
 
 Both ONNX files take the same input, `images`: float32 RGB in [0, 1], 1×3×512×512. DeepLabV3+ returns
 `logits` (1×10×512×512) and only needs an `argmax`. YOLO11n-seg returns `output0` (1×45×5376: boxes, 9

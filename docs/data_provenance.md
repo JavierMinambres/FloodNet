@@ -118,7 +118,7 @@ This matters because the notebooks quote figures from earlier stages.
 
 ### Stage 0: the Kaggle starting notebook
 
-File `original-hybrid-cnn-vit-attention-u-net.ipynb`, kept unchanged. **[verified** in its code**]**
+Public Kaggle notebook by *huyhoangti* (<https://www.kaggle.com/code/huyhoangti/hybrid-cnn-vit-attention-u-net>). A copy was kept in this repository up to commit `6b12446` (file `original-hybrid-cnn-vit-attention-u-net.ipynb`). **[verified** in its code**]**
 
 - **Train**: the 398 Track 1 images with their **official masks**, uncorrected.
 - **Validation and test**: the 81 images of `data_finally/val` (Kaggle masks), split with

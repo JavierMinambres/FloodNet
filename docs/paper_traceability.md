@@ -46,7 +46,7 @@ above DeepLabV3+") are marked *derived* and can be checked from the rows they co
 | Oversampling: each scarce class at least ~650 times per epoch | target 0.5 × 1,305 Grass images; 3,495 samples per epoch | SEG §3, output of cell 29 (counts before and after oversampling) |
 | Strong and mild augmentation | | SEG §3.1, cell 32 |
 | TTA over the image and its three flips | | SEG §5.7, cell 57 (`tta_predict`) |
-| Changes to the starting notebook (split, metric, class weights, unscale before clipping, scheduler step) | | SEG §5.2, §5.5, §5.7, §5.8 (markdown cells 44, 50, 56, 59); `original-hybrid-cnn-vit-attention-u-net.ipynb` |
+| Changes to the starting notebook (split, metric, class weights, unscale before clipping, scheduler step) | | SEG §5.2, §5.5, §5.7, §5.8 (markdown cells 44, 50, 56, 59); starting notebook on Kaggle (https://www.kaggle.com/code/huyhoangti/hybrid-cnn-vit-attention-u-net; copy in the repository history up to commit `6b12446`) |
 | DeepLabV3+ configuration (ResNet-50, OS 16, 40 epochs, CE + Dice, AdamW 1e-4, cosine, batch 8, no oversampling, no TTA) | | DL, cell P (cell 2) and §3 (cell 18) |
 | YOLO11n-seg conversion (components < 20 px dropped, Background holes opened) | | YOLO, cell P (cell 2) and §3 (cell 17) |
 | Conversion ceiling | 0.977 mIoU | YOLO §4, output of cell 19 |

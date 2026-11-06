@@ -80,7 +80,6 @@ from.
 | [docs/data_provenance.md](docs/data_provenance.md) | Where every image and mask comes from, what the final dataset is and what is known about the revised masks. |
 | [docs/paper_traceability.md](docs/paper_traceability.md) | Source of every number and figure in the paper. |
 | [revision_mascaras/](revision_mascaras) | Comparison between the official and the revised masks (CSV, contact sheets and the scripts that generate them). |
-| [original-hybrid-cnn-vit-attention-u-net.ipynb](original-hybrid-cnn-vit-attention-u-net.ipynb) | The public Kaggle notebook used as the starting point for the U-Net ([huyhoangti](https://www.kaggle.com/code/huyhoangti/hybrid-cnn-vit-attention-u-net)), kept unchanged for comparison. |
 | [pyproject.toml](pyproject.toml), [uv.lock](uv.lock) | Environment managed with `uv`, with exact resolved versions. |
 
 **A note on language.** The prose of the repository (this README, `docs/`, the markdown cells and the

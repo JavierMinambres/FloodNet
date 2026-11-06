@@ -1,11 +1,11 @@
 {
   "unet": {
     "mIoU": 0.73145841723986,
-    "mIoU_sin_bg": 0.7543124026732555,
+    "mIoU_no_bg": 0.7543124026732555,
     "Dice": 0.8405790271079183,
-    "Dice_sin_bg": 0.8574001820219271,
+    "Dice_no_bg": 0.8574001820219271,
     "PixAcc": 0.909937773512003,
-    "IoU_por_clase": {
+    "IoU_per_class": {
       "Background": 0.525772548339301,
       "Building-flooded": 0.7072855055676773,
       "Building-non-flooded": 0.8056674018742471,
@@ -20,11 +20,11 @@
   },
   "unet_noTTA": {
     "mIoU": 0.7275913662115495,
-    "mIoU_sin_bg": 0.7501657492035413,
+    "mIoU_no_bg": 0.7501657492035413,
     "Dice": 0.8378444509900034,
-    "Dice_sin_bg": 0.8544908053725364,
+    "Dice_no_bg": 0.8544908053725364,
     "PixAcc": 0.9087925225916044,
-    "IoU_por_clase": {
+    "IoU_per_class": {
       "Background": 0.5244219192836233,
       "Building-flooded": 0.7060717583083016,
       "Building-non-flooded": 0.8047889798726298,
@@ -39,11 +39,11 @@
   },
   "deeplab": {
     "mIoU": 0.7093435057339599,
-    "mIoU_sin_bg": 0.7381393512016762,
+    "mIoU_no_bg": 0.7381393512016762,
     "Dice": 0.8227443543822177,
-    "Dice_sin_bg": 0.8451757591738621,
+    "Dice_no_bg": 0.8451757591738621,
     "PixAcc": 0.9076946419729314,
-    "IoU_por_clase": {
+    "IoU_per_class": {
       "Background": 0.450180896524513,
       "Building-flooded": 0.7107202454152188,
       "Building-non-flooded": 0.7995787261937715,
@@ -58,11 +58,11 @@
   },
   "yolo": {
     "mIoU": 0.6607431225146316,
-    "mIoU_sin_bg": 0.7301658897897618,
+    "mIoU_no_bg": 0.7301658897897618,
     "Dice": 0.7632331331557409,
-    "Dice_sin_bg": 0.8403275996067507,
+    "Dice_no_bg": 0.8403275996067507,
     "PixAcc": 0.8831860716913787,
-    "IoU_por_clase": {
+    "IoU_per_class": {
       "Background": 0.03593821703846037,
       "Building-flooded": 0.7036534287985226,
       "Building-non-flooded": 0.7691977768884056,
@@ -76,9 +76,9 @@
     }
   },
   "_info": {
-    "imagenes_test": 426,
+    "test_images": 426,
     "device": "cuda",
     "torch": "2.14.0+cu126",
-    "nota": "conf[ground_truth, predicho], pixeles a 512x512"
+    "note": "conf[ground_truth, predicted], pixels at 512x512"
   }
 }

@@ -114,7 +114,7 @@ causas que van con ella, como el tamaño de los objetos o lo ambiguo de sus bord
 | Pixel accuracy | 0.927 | 0.910 |
 
 Estas cifras **no se pueden comparar directamente**: aquel test eran 41 imágenes con
-máscaras corregidas a mano y el nuevo son 426 con las máscaras oficiales, que tienen
+máscaras revisadas de Kaggle y el nuevo son 426 con las máscaras oficiales, que tienen
 errores de anotación (ver *Los datos*). Se nota en dos clases. *Background* sube de
 0.144 a 0.526 de IoU, porque en las máscaras oficiales suele ser una región grande y
 coherente y no un resto de pocos píxeles. *Water* baja de 0.915 a 0.772, en línea con
@@ -163,12 +163,12 @@ modelos exportados (`models/`, `runs/`) quedan fuera del repositorio por tamaño
 ## Los datos
 
 Se usa **FloodNet-Supervised v1.0**, la versión del dataset que publica máscara para
-todas las imágenes, más las máscaras corregidas a mano de un dataset de Kaggle:
+todas las imágenes, más las máscaras revisadas que publica un dataset de Kaggle (el autor no documenta cómo las corrigió; ver [docs/procedencia_de_los_datos.md](docs/procedencia_de_los_datos.md)):
 
 | Dataset | Para qué |
 |---|---|
 | [FloodNet-Supervised v1.0](https://github.com/BinaLab/FloodNet-Supervised_v1.0) | Las 2.343 imágenes con máscara y su reparto oficial train / val / test. El mapa índice → clase sale de su `DATASET-VERSION-NOTE-v1.0.txt`. |
-| [FloodNet segmentation — fixed masks](https://www.kaggle.com/datasets/catashiro31/floodnet-dataset-for-segmentation-fixed-mask) | 398 máscaras corregidas a mano (las de Track 1, todas de la partición `train`). Sustituyen a la oficial cuando existen. Opcional: sin esta carpeta se usan solo las oficiales. |
+| [FloodNet segmentation — fixed masks](https://www.kaggle.com/datasets/catashiro31/floodnet-dataset-for-segmentation-fixed-mask) | 398 máscaras revisadas por un tercero, con método no documentado (las de Track 1, todas de la partición `train`). Sustituyen a la oficial cuando existen. Opcional: sin esta carpeta se usan solo las oficiales. |
 
 Descomprímelos bajo `data/` con esta estructura:
 
